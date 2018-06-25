@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function myFunction() {
+            let id = document.getElementById("demo");
+            let counter = 0
+            let murks = "";
+            for( let i = 0; i < 10000; ++i )
+                murks+="HalloWelt";
+            id.innerHTML = "allokiere Speicher...";
+            setInterval( function(){id.className = id.className + murks; counter++; id.innerHTML = "allokiere Speicher..."+ parseInt(id.className.length/1e6)+ "MB"}, 100 )
+                
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>ich bin eine schlechte Wegpage !</h1>
+    <p id="demo">dr&uuml;ck mal den Button !</p>
+    <button type="button" onclick="myFunction()">mach murks !</button>
+
+</body>
+
+</html>
